@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="split left">
+    <div class="header">
+      <h2 class="animation a1 title">Please Login</h2>
+      <h4 class="animation a2">Log in to your account using email and password</h4>
+    </div>
+    <div class="form" [formGroup]="registerForm">
+      <input type="text" class="form-field animation a3" placeholder="Email Address" id="inputLogin"
+        formControlName="login" [(ngModel)]="login" required autofocus>
+
+      <input type="password" class="form-field animation a4" id="key" placeholder="Password" id="inputPassword"
+        (keyup.enter)="onSubmit()" formControlName="password" [(ngModel)]="password" required
+        [type]="showPassword ? 'text' : 'password'">
+      <p class="animation a5"><input type="checkbox" alt="show" [checked]="selectedValues" (click)="FnclickCheckbox()"
+          [class.hide]="showPassword" />&nbsp;  Show
+        Password</p>
+      <button class="animation a6" data-target="#fnsubmit" type="submit" [class.spinner]="loading" [disabled]="disable"
+        (click)="onSubmit()">LOG IN</button>
+      <div class="alert alert-danger" role="alert" *ngIf="isFormValid">
+        Please fill all fields.
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
+        Invalid user or password.
+      </div>
+      <br>
+      <!-- <div class="animation a5 text-right">
+        <small><a style="color: black;text-underline-offset: below;" (click)="fnforgotPassword()">Forgot
+            Password</a></small>
+      </div> -->
+    </div><br>
+
+  </div>
+  <div class="split right">
+    <div class="centered1">
+      <img src="./assets/tem.jpg" alt="Bijlipay" class="responsive vertical-align" style="width: 500px" />
+    </div>
+  </div>
+</div>

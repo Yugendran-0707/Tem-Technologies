@@ -1,0 +1,32 @@
+<div class="model">
+    <br><br>
+    <div>
+        <h2 class="text-center title" style="color: black;">
+            &nbsp;&nbsp;&nbsp;Fibonacci Series</h2><br><br>
+    </div>
+    <div class="container" [ngStyle]="{'box-shadow': '0px 0px 10.5px rgba(0, 0, 0, 0.3)'}">
+ 
+            <mat-grid-list cols="1" rowHeight="400px" [gutterSize]="'5px'">
+                <mat-grid-tile [colspan]="1" id="mat-grid-tile" style="padding-left: 45px">
+                    <div class="hierfun">
+                        <label>Enter position:</label>&nbsp;
+                        <input type="number" [(ngModel)]="position" /> <br><br>
+                        <div class="row justify-content-center">
+                            <div class="col-8">
+                                <button class="btn btn-info" (click)="calculateFibonacci()"> Calculate</button>&nbsp;
+                            </div>
+    
+                        </div>
+                        <div *ngIf="result !== null">
+                            <b>Fibonacci value at position {{ position }} is {{ result }}</b>
+                        </div>
+                    </div>
+
+                </mat-grid-tile>
+            </mat-grid-list> <br>
+   
+    </div>
+
+
+
+</div>

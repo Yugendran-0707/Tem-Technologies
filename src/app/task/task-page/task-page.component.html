@@ -1,0 +1,51 @@
+<div class="model">
+  <br><br>
+  <div>
+    <h2 class="text-center title" style="color: black;">
+      &nbsp;&nbsp;&nbsp;File Upload</h2><br><br>
+  </div>
+  <div class="container" [ngStyle]="{'box-shadow': '0px 0px 10.5px rgba(0, 0, 0, 0.3)'}">
+    <mat-grid-list cols="1" rowHeight="250px" [gutterSize]="'5px'">
+      <mat-grid-tile [colspan]="1" id="mat-grid-tile" style="padding-left: 45px">
+        <div class="hierfun">
+          <input type="file" (change)="onFileSelected($event)"> <br><br>
+          <div *ngIf="imageSize == true">
+             Uploaded image size is more then 10MB, please upload less than 10MB
+          </div>
+          <div *ngIf="videoSize == true">
+            Uploaded video size is more then 10MB, please upload less than 10MB
+         </div>
+          <div class="row justify-content-center">
+            <div class="col-8" *ngIf="imageFlag == true">
+              <button class="btn btn-info" (click)="uploadImageFile()"
+                [disabled]="!file || uploadStatus === 'inProgress'">Upload</button>
+            </div>
+            <div class="col-8" *ngIf="VideoFlag == true">
+              <button class="btn btn-info" (click)="uploadVideoFile()"
+                [disabled]="!file || uploadStatus === 'inProgress'">Upload</button>
+            </div>
+
+          </div>
+          <div *ngIf="uploadStatus === 'invalid'">
+           uploaded file is not a image/ video type. Please upload image/video type.
+          </div>
+          <div *ngIf="uploadStatus === 'inProgress'">
+            Uploading... {{ progress }}%
+            <progress max="100" [value]="progress"></progress>
+          </div>
+          <div *ngIf="uploadStatus === 'success'">
+            Upload successful!
+          </div>
+          <div *ngIf="uploadStatus === 'error'">
+            Error uploading file. Please try again.
+          </div>
+        </div>
+
+      </mat-grid-tile>
+    </mat-grid-list> <br>
+
+  </div>
+
+
+
+</div>

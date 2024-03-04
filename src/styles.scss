@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  height: 100%;
+}
+
+// body {
+//   margin: 0;
+//   font-family: Roboto, "Helvetica Neue", sans-serif;
+// }
+
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.blue-snackbar {
+  background: #02a510;
+  color: white;
+}
+
+.error-snackbar {
+  background: #e20606;
+  color: white;
+}
+.error-snackbar1 {
+  background: white;
+  color: white;
+  background-color: #e20606;
+}
+
+.error-snackbar2 {
+  background: #e20606;
+  color: white;
+  max-width: 90% !important;
+  height: auto;
+}
+
+.mat-mdc-snack-bar-container.blue-snackbar {
+  --mat-mdc-snack-bar-button-color: #21ba45 !important;
+  --mdc-snackbar-container-color: #21ba45 !important;
+  --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+}
+.mat-mdc-snack-bar-container.error-snackbar {
+  --mat-mdc-snack-bar-button-color: #d32f2f !important;
+  --mdc-snackbar-container-color: #d32f2f !important;
+  --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+}
+.mat-mdc-snack-bar-container.Error {
+  --mat-mdc-snack-bar-button-color: #d32f2f !important;
+  --mdc-snackbar-container-color: #d32f2f !important;
+  --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+}
+.mat-mdc-snack-bar-container.Fail {
+  --mat-mdc-snack-bar-button-color: rgb(235, 162, 28) !important;
+  --mdc-snackbar-container-color: rgb(235, 162, 28) !important;
+  --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 75px;
+  height: 75px;
+  margin-block-end: 30px;
+  border-radius: 50%;
+  border: 4px solid rgb(147, 42, 218);
+  border-top-color: #faf9f9;
+  animation: spinner 0.8s linear infinite;
+}
+
+body {
+  font-size: 1.5vw;
+}
+
+@media only screen and (min-width: 600px){
+  body {
+    font-size: 1.2rem;
+  }
+}
+// /*###Desktops, big landscape tablets and laptops(Large, Extra large)####*/
+// @media screen and (min-width: 1024px){
+//   /*Style*/
+//   }
+
+//   /*###Tablet(medium)###*/
+//   @media screen and (min-width : 768px) and (max-width : 1023px){
+//   /*Style*/
+//   }
+
+//   /*### Smartphones (portrait and landscape)(small)### */
+//   @media screen and (min-width : 0px) and (max-width : 767px){
+//   /*Style*/
+//   }
+
+// @media only screen and (max-device-width: 480px) {
+//   div#wrapper {
+//       width: 400px;
+//   }
+
+//   div#header {
+//       height: 93px;
+//       position: relative;
+//   }
+
+//   div#header h1 {
+//       font-size: 140%;
+//   }
+
+//   #content {
+//       float: none;
+//       width: 100%;
+//   }
+
+//   #navigation {
+//       float:none;
+//       width: auto;
+//   }
+// }
